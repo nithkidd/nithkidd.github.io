@@ -48,7 +48,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   padding: 8px 0;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 nav ul li a:hover {
@@ -115,6 +115,15 @@ nav ul li a:hover::after {
 
 .header-text h1 {
   font-size: 48px;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .header-text h1 span {
@@ -122,11 +131,43 @@ nav ul li a:hover::after {
 }
 
 .header-text p {
+  font-family: monospace;
   font-size: 24px;
-  margin-top: 20px;
+  display: inline-block; 
+  color: #fff;
+  animation: typing 2s steps(12) infinite alternate-reverse;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* About Section (Original Style) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+#about, #services {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 #about {
   padding: 80px 10%;
   color: gray;
@@ -165,7 +206,6 @@ nav ul li a:hover::after {
 .tab-links {
   margin-right: 50px;
   font-size: 18px;
-  font-weight: 500;
   cursor: pointer;
   position: relative;
 }
@@ -292,40 +332,13 @@ footer {
   color: #fff;
   font-size: 14px;
 }
-/* Responsive Navbar */
-@media (max-width: 768px) {
-/* Navbar styling */
-nav ul {
-  overflow: hidden; /* Prevents content overflow */
-  max-height: 0; /* Initially hide the menu */
-  transition: max-height 0.5s ease; /* Smooth transition for max-height */
-  background-color: #080808; /* Ensure background color matches */
-  border-radius: 5px; /* Optional: add some rounding to corners */
-}
 
-/* Active class for the menu */
+
 nav ul.active {
-  max-height: 500px; /* Adjust based on expected menu size */
+  max-height: 500px;
 }
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  nav ul {
-    display: flex; /* Ensure it displays as flex */
-    flex-direction: column; /* Stack items in a column */
-    width: 100%;
-    padding: 10px 0; /* Add some padding */
-  }
-
-  .menu-toggle {
-    display: block; /* Show hamburger icon */
-  }
-}
-
-}
-/* Navbar Link Styles */
 nav ul li {
-  position: relative; /* Needed for the pseudo-element positioning */
+  position: relative;
 }
 
 nav ul li a {
@@ -343,20 +356,35 @@ nav ul li a::after {
   width: 0;
   height: 2px;
   background-color: #ff004f;
-  transition: width 0.4s ease; /* Transition for the underline */
+  transition: width 0.4s ease;
   position: absolute;
-  bottom: -5px; /* Position it below the text */
-  left: 50%; /* Center the underline */
-  transform: translateX(-50%); /* Adjust for centering */
+  bottom: -5px; 
+  left: 50%; 
+  transform: translateX(-50%);
 }
 
-/* Hover effect */
 nav ul li a:hover::after,
 nav ul li a.active::after {
-  width: 100%; /* Expand the underline on hover or active */
+  width: 100%;
 }
 
-/* Active Link Style */
 nav ul li a.active {
-  color: #ff004f; /* Change color of the active link */
+  color: #ff004f;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0; 
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    background-color: #080808;
+    border-radius: 5px;
+  }
+  .menu-toggle {
+    display: block;
+  }
 }

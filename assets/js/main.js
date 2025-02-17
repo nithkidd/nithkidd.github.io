@@ -30,3 +30,38 @@ menuLinks.forEach(link => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const aboutSection = document.querySelector('#about');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        aboutSection.classList.add('fade-in'); // or 'pop-in' for pop animation
+        observer.unobserve(aboutSection);
+      }
+    });
+  }, {
+    threshold: 0.5 // Adjust this value as needed
+  });
+
+  observer.observe(aboutSection);
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('#about, #services');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in'); // or 'pop-in' for pop animation
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5 // Adjust this value as needed
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
