@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NiThKidd</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/d2aa775fb1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h1>Portfolio</h1>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul id="navbar">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://pay.ababank.com/tYGUDa8TwzLLJ1kG9" target="_blank">Donate Me</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-text">
+          <h1>Hi, This is <span>Sophanith</span></h1>
+          <p>Sophomore</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="assets/image/photo_2024-10-17_00-55-43.jpg" alt="image001" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="about-text">
+              As a passionate learner, I embarked on a journey to enhance my skills in web development. 
+              My curiosity led me to Instinct Institute, a professional 
+              training institution in Phnom Penh. Here’s a glimpse into my life as a front-end development student.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('certification')">Certification</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Computer Science</span><br />Software Engineer</li>
+                <li><span>Front-End Developer</span><br />HTML <i class="fa-brands fa-html5"></i>,  
+                  CSS <i class="fa-brands fa-css3-alt"></i>, JavaScript <i class="fa-brands fa-square-js"></i></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2005 - 2024</span><br />None</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2010</span><br />Teuk Laak Kindergarten School</li>
+                <li><span>2011 - 2016</span><br />Sovannaphumi School (Tep Phan Campus)</li>
+                <li><span>2011 - 2016</span><br />Santhormok Elementary School</li>
+                <li><span>2017</span><br />Santhormok High School</li>
+                <li><span>2018 - 2023</span><br />Indradevy High School</li>
+                <li><span>2023 - 2024</span><br />Instinct Institute</li>
+                <li><span>2024 - Now</span><br />Cambodia Academy of Digital Technology</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="certification">
+              <ul>
+                <li><span>CCNA</span><br />Teuk Laak Kindergarten School</li>
+                <li><span>2011 - 2016</span><br />Sovannaphumi School (Tep Phan Campus)</li>
+                <li><span>2011 - 2016</span><br />Santhormok Elementary School</li>
+                <li><span>2017</span><br />Santhormok High School</li>
+                <li><span>2018 - 2023</span><br />Indradevy High School</li>
+                <li><span>2023 - 2024</span><br />Instinct Institute</li>
+                <li><span>2024 - Now</span><br />Cambodia Academy of Digital Technology</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Web Design, on the other hand, typically refers to the user experience aspects of 
+              website development rather than software development. 
+              It encompasses the website’s appearance, layout, and sometimes content, 
+              focusing on making the site easy to use, aesthetically pleasing, and suitable for the user group and brand</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>Graphic Design</h2>
+            <p>Graphic design is an expansive field that encompasses the art of visual communication through various mediums. 
+              It’s a creative process that combines art and technology to communicate ideas. 
+              The experience of graphic design can be both exhilarating and challenging, as it involves a blend of creativity, 
+              technical skills, and problem-solving.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>App designer is a multifaceted experience that involves a blend of creativity, 
+              technical skill, and user psychology understanding. Here’s a glimpse into the life of an app designer.</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-brands fa-telegram"></i> contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i> 012 345 678</p>
+            <div class="social-icon">
+              <a href="https://www.facebook.com/ragee.kidd?mibextid=LQQJ4d"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/nithkidd?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
